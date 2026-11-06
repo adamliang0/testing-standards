@@ -57,7 +57,7 @@ def test_invalid_integer() -> None:
 ## Coverage and CI
 - Treat coverage as a diagnostic signal, not proof of quality.
 - Cover high-risk branches and exceptions. Review missing lines rather than maximizing a number.
-- Run `uv sync --locked`, `uv run pyright`, and `uv run pytest --cov` in CI once `uv.lock` is committed.
+- Run `uv sync --locked`, `uv run ty check`, and `uv run pytest --cov` in CI once `uv.lock` is committed.
 - CI should fail on test failures and static type errors.
 
 ## Review checklist
@@ -66,6 +66,6 @@ def test_invalid_integer() -> None:
 - [ ] No network, clock, or filesystem dependencies without explicit isolation.
 - [ ] Parametrization replaces needless repeated tests.
 - [ ] Types of test functions and fixtures are explicit.
-- [ ] `uv run pytest` and `uv run pyright` pass.
+- [ ] `uv run pytest` and `uv run ty check` pass.
 
 See [runnable example](../tests/test_validation.py).
