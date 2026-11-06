@@ -1,0 +1,27 @@
+[project]
+name = "testing-standards-python"
+version = "0.1.0"
+description = "Reference implementations for Python testing and typing standards"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "pytest>=8",
+  "pytest-cov>=6",
+  "hypothesis>=6",
+  "pyright>=1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["testing/tests"]
+addopts = "-ra --strict-markers"
+
+[tool.pyright]
+include = ["typing/examples", "testing/examples", "testing/tests"]
+typeCheckingMode = "strict"
+pythonVersion = "3.13"
+reportUnnecessaryTypeIgnoreComment = "error"
+
+[tool.coverage.run]
+source = ["testing/examples", "typing/examples"]
