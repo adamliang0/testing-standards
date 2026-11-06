@@ -2,6 +2,7 @@
 
 ## Testing
 - [Testing standards](testing/docs/README.md)
+- [Advanced testing and escalation policy](testing/docs/ADVANCED_TESTING.md)
 - [Validation example](testing/examples/validation.py)
 - [pytest parametrization and errors](testing/tests/test_validation.py)
 
