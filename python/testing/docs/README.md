@@ -7,6 +7,7 @@
 4. [Mocking](#mocking)
 5. [Coverage and CI](#coverage-and-ci)
 6. [Review checklist](#review-checklist)
+7. [Advanced testing and escalation](#advanced-testing-and-escalation)
 
 ## Setup and execution
 
@@ -67,5 +68,9 @@ def test_invalid_integer() -> None:
 - [ ] Parametrization replaces needless repeated tests.
 - [ ] Types of test functions and fixtures are explicit.
 - [ ] `uv run pytest` and `uv run ty check` pass.
+
+## Advanced testing and escalation
+
+For property-based and stateful tests, mutation testing, real integration contracts, fault injection, and proportional CI gates, follow the [advanced testing standard](ADVANCED_TESTING.md). It defines explicit risk-based escalation triggers so routine changes do not require unnecessary advanced tooling.
 
 See [runnable example](../tests/test_validation.py).
