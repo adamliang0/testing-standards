@@ -10,18 +10,15 @@ dev = [
   "pytest>=8",
   "pytest-cov>=6",
   "hypothesis>=6",
-  "pyright>=1.1",
+  "ty",
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["testing/tests"]
 addopts = "-ra --strict-markers"
 
-[tool.pyright]
-include = ["typing/examples", "testing/examples", "testing/tests"]
-typeCheckingMode = "strict"
-pythonVersion = "3.13"
-reportUnnecessaryTypeIgnoreComment = "error"
+[tool.ty.environment]
+extra-paths = ["./stubs"]
 
 [tool.coverage.run]
 source = ["testing/examples", "typing/examples"]
