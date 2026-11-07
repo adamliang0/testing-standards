@@ -13,6 +13,14 @@
 - [Consumer-driven stub conventions](stubs/README.md)
 - [Example instructions](typing/examples/README.md)
 
+## Code examples
+- [Packaging and environments](packaging/README.md)
+- [Installable uv project](packaging/examples/sample_project/README.md)
+- [Mutability and object semantics](mutability/README.md)
+- [Immutable values, state isolation, and closures](mutability/examples/models.py)
+- [Exception handling](exceptions/README.md)
+- [Typed errors, exception chaining, and boundaries](exceptions/examples/settings.py)
+
 ## Toolchain
 - [uv project and ty/pytest configuration](pyproject.toml)
 

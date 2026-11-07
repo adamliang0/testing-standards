@@ -14,11 +14,11 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["testing/tests"]
+testpaths = ["testing/tests", "mutability/tests", "exceptions/tests"]
 addopts = "-ra --strict-markers"
 
 [tool.ty.environment]
-extra-paths = ["./stubs"]
+extra-paths = ["./stubs", "./packaging/examples/sample_project/src"]
 
 [tool.coverage.run]
-source = ["testing/examples", "typing/examples"]
+source = ["testing/examples", "typing/examples", "mutability/examples", "exceptions/examples"]
